@@ -1,0 +1,1 @@
+Install driver with insmod [PATH_TO_DRIVER]/test_kmod.ko

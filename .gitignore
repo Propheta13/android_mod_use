@@ -1,3 +1,25 @@
+# Project files
+*.config
+*.files
+*.includes
+*.creator
+*.creator.user
+
+# Compiled files
+*.o
+*.ko
+*.o.cmd
+*.ko.cmd
+*.mod.c
+*.mod.o
+*.mod
+*.symvers
+*.order
+*.*~
+*~
+*.a
+*.so
+
 # built application files
 *.apk
 *.ap_

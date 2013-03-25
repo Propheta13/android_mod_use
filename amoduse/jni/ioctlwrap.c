@@ -16,7 +16,7 @@ JNIEXPORT jstring JNICALL Java_com_propheta13_amoduse_IoctlWrapper_getKData
 
 	dfd = open(TKMOD_DEV_PATH, O_RDONLY);
 
-	if(dfd == 0)
+	if(dfd < 0)
 	{
 		jstring RetString = (*env)->NewStringUTF(env, string);
 		goto exit;
@@ -24,7 +24,7 @@ JNIEXPORT jstring JNICALL Java_com_propheta13_amoduse_IoctlWrapper_getKData
 
 	info_buf = malloc(BUF_SIZE);
 	rc = ioctl(dfd, TKMOD_IOCTL_GET_DATA, info_buf);
-	if(rc)
+	if(rc < 0)
 	{
 		strerror_r(rc, info_buf, BUF_SIZE);
 	}
